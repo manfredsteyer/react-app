@@ -24,4 +24,4 @@ class Mfe4Element extends HTMLElement {
   }
 }
 
-customElements.define('mfe4-element', Mfe4Element);
+customElements.define('react-element', Mfe4Element);
