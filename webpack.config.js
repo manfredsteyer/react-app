@@ -1,5 +1,5 @@
 const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
-
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = options => {
   return {
@@ -38,6 +38,13 @@ module.exports = options => {
           },        
 
           shared: ["react", "react-dom"]
+        }),
+        new CopyWebpackPlugin({
+          patterns: [
+            {
+              from: './*.html'
+            }
+          ]
         })
     ],
     devServer: {
