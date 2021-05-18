@@ -30,8 +30,8 @@ module.exports = options => {
       new ModuleFederationPlugin({
         
           // For remotes (please adjust)
-          name: "mfe4",
-          library: { type: "var", name: "mfe4" },
+          name: "react",
+          library: { type: "var", name: "react" },
           filename: "remoteEntry.js",
           exposes: {
               './web-components': './app.js',
