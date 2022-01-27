@@ -32,11 +32,10 @@ module.exports = options => {
           // For remotes (please adjust)
           name: "react",
           library: { type: "var", name: "react" },
-          filename: "remoteEntry.js",
+          filename: "remoteEntry.js", // <-- Meta Data
           exposes: {
               './web-components': './app.js',
           },        
-
           shared: ["react", "react-dom"]
         }),
         new CopyWebpackPlugin({
